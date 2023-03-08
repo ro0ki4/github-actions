@@ -1,6 +1,8 @@
 name: glados checkin
 
 on:
+  push:
+    branches: [main,master]
   schedule:
     - cron: '15 10 * * *'
 jobs:
