@@ -4,7 +4,7 @@ on:
   push:
     branches: [main,master]
   schedule:
-    - cron: '50 1 * * *'
+    - cron: '5 1 * * *'
 jobs:
   bot:
     runs-on: ubuntu-latest
