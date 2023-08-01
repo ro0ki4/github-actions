@@ -5,7 +5,7 @@ import os
 
 url = "https://glados.rocks/api/user/checkin"
 
-payload = "{\"token\":\"glados.network\"}"
+payload = "{\"token\":\"glados.one\"}"
 headers = {
   'authority': 'glados.rocks',
   'accept': 'application/json, text/plain, */*',
@@ -38,4 +38,3 @@ elif (response.text.find("Please Try Tomorrow") != -1):
   print("success")
 else:
   print("fail")
-
