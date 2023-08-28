@@ -33,8 +33,8 @@ response = requests.request("POST", url, headers=headers, data=payload)
 
 
 if (response.text.find("Checkin! Get 1 Day") != -1):
-  print("success"+"\n"+response.text)
+  print("success"+"\n"+response.text[0:100])
 elif (response.text.find("Please Try Tomorrow") != -1):
-  print("success"+"\n"+response.text)
+  print("success"+"\n"+response.text[0:100])
 else:
-  print("fail"+"\n"+response.text)
+  print("fail"+"\n"+response.text[0:100])
