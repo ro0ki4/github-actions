@@ -32,16 +32,11 @@ time.sleep(timeSecond+timeMin*60)
 response = requests.request("POST", url, headers=headers, data=payload)
 len1 = min(len(response.text),100)
 data = response.text[0:len1]
-data = data.replace("\'"," ")
-data = data.replace("\""," ")
-data = data.replace("["," ")
-data = data.replace("{"," ")
-data = data.replace(":"," ")
-data = data.replace(","," ")
+
 
 if (response.text.find("Checkin! Get 1 Day") != -1):
-  print("success"+"\n"+data)
+  print("success"+","+data)
 elif (response.text.find("Please Try Tomorrow") != -1):
-  print("success"+"\n"+data)
+  print("success"+","+data)
 else:
-  print("fail"+"\n"+data)
+  print("fail"+","+data)
