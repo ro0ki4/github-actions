@@ -33,6 +33,7 @@ response = requests.request("POST", url, headers=headers, data=payload)
 len1 = min(len(response.text),100)
 data = response.text[0:len1]
 data = data.replace("\'"," ")
+data = data.replace("\""," ")
 data = data.replace("["," ")
 data = data.replace("{"," ")
 data = data.replace(":"," ")
