@@ -26,7 +26,7 @@ headers = {
 
 timeSecond = random.randint(1,59)
 timeMin = random.randint(0,1)
-# timeMin = 0
+timeMin = 1
 time.sleep(timeSecond+timeMin*60)
 
 response = requests.request("POST", url, headers=headers, data=payload)
