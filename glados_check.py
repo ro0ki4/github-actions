@@ -35,7 +35,7 @@ data = response.text[0:len1]
 
 
 if (response.text.find("Checkin! Get 1 Day") != -1):
-  print("success"+","+data)
+  print("success"+","+data)  
 elif (response.text.find("Please Try Tomorrow") != -1):
   print("success"+","+data)
 else:
